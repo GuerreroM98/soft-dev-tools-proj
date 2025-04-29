@@ -14,6 +14,7 @@ df['price'] = df['price'].replace('[\$,]', '', regex=True)
 df['price'] = df['price'].fillna(0)
 
 
+
 df['date_posted'] = pd.to_datetime(df['date_posted'])
 
 df['model_year'] = df['model_year'].fillna(df.groupby('model')['model_year'].transform(lambda x: x.median()))
