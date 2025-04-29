@@ -43,7 +43,7 @@ df_filtered = df[ (df.model == selected_model) & (df.model_year.isin(list(actual
 
 st.header('Histogram distribution of vehicle model by vehicle type')
 
-fig6 = px.histogram(df, x='model', color='type',barmode='overlay',nbins=30, title='distribution showing model count per vehicle type')
+fig6 = px.histogram(df_filtered, x='model', color='type',barmode='group',nbins=30, title='distribution showing model count per vehicle type')
 
 st.plotly_chart(fig6)
 
