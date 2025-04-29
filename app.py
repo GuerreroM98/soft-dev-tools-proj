@@ -39,7 +39,7 @@ year_range = st.slider("Choose years", value=(min_year, max_year), min_value=min
 actual_range = list(range(year_range[0], year_range[1]+1))
 df_filtered = df[ (df.model == selected_model) & (df.model_year.isin(list(actual_range)) )]
 
-st.dataframe(df_filtered)
+#st.dataframe(df_filtered)
 
 st.header('Histogram distribution of vehicle model by vehicle type')
 
