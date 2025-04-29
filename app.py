@@ -10,6 +10,7 @@ st.write('filter the data below to see the vehicles listed')
 
 df = pd.read_csv('vehicles_us.csv')
 df['price'] = pd.to_numeric(df['price'], errors='coerce').astype('float64')
+df['price'] = df['price'].replace('[\$,]', '', regex=True)
 df['price'] = df['price'].fillna(0)
 
 
