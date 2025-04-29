@@ -9,6 +9,8 @@ st.write('filter the data below to see the vehicles listed')
 
 
 df = pd.read_csv('vehicles_us.csv')
+df['price'] = pd.to_numeric(df['price'], errors='coerce') 
+df['price'] = df['price'].fillna(0)
 
 
 df['date_posted'] = pd.to_datetime(df['date_posted'])
